@@ -1,0 +1,42 @@
+import { SiteHeader } from "@/components/site-header"
+import Link from "next/link"
+
+export default function Home() {
+  return (
+    <div className="flex min-h-screen flex-col">
+      {/* Memanggil Menu Navigasi Baru dengan Tombol Login Admin */}
+      <SiteHeader />
+
+      <main className="flex-1">
+        {/* Bagian Hero Utama */}
+        <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10 px-4">
+          <div className="flex max-w-[980px] flex-col items-start gap-2">
+            <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700">
+              Pendidikan Anak Usia Dini 2-4 Tahun
+            </span>
+            <h1 className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl mt-2">
+              Menyalakan cahaya <span className="text-orange-500">masa depan</span> si kecil
+            </h1>
+            <p className="max-w-[700px] text-lg text-muted-foreground mt-2 text-gray-600">
+              Di PAUD Lentera, setiap anak belajar sambil bermain dalam lingkungan yang hangat, aman, dan penuh kasih. Kami menumbuhkan rasa ingin tahu, karakter, dan kepercayaan diri sejak dini.
+            </p>
+          </div>
+          <div className="flex gap-4 mt-4">
+            <Link
+              href="#daftar"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-orange-500 px-6 font-medium text-white hover:bg-orange-600"
+            >
+              Daftar Sekarang
+            </Link>
+            <Link
+              href="#program"
+              className="inline-flex h-10 items-center justify-center rounded-md border border-gray-300 px-6 font-medium hover:bg-gray-50"
+            >
+              Lihat Program
+            </Link>
+          </div>
+        </section>
+      </main>
+    </div>
+  )
+}
